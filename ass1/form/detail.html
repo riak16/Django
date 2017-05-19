@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+</head>
+<body>
+	<h1> The form comes here.</h1>
+	<form action = "{% url 'form:submit' ## %}" method="post" enctype="multipart/form-data">
+		{% crsf_token %}
+		{% include 'music/form-template.html' %}
+		<label> Form details here!</label>
+		<buttontype ="submit" name="submit">Submit</buttontype>
+	</form>
+</body>
+</html>

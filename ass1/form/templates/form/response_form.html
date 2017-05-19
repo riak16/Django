@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+</head>
+<body>
+	<h1> The form comes here.</h1>
+	<form action = "{% url 'form_view' %}" method="post" enctype="multipart/form-data" role ="form">
+		{% csrf_token %}
+		<label> Form details here!</label>
+		{% include 'form/form-template.html' %}
+		<button type="submit" name="submit"> Submit!!</button> 
+	</form>
+</body>
+</html>
